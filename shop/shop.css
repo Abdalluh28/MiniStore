@@ -1,0 +1,107 @@
+#linkone>a{
+    color: #72AEC8;
+}
+.hoverlink:hover>a{
+    color: #72AEC8;
+}
+.cart{
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+}
+.cart>*{
+    color: black;
+    transition: all 0.3s;
+}
+.cart:hover>*{
+    color: #72AEC8;
+}
+
+
+
+.header{
+    background-color: #EDF1F3;
+    height: 200px;
+}
+.header>span{
+    font-size: 50px;
+}
+#link{
+    text-decoration: none;
+    color: black;
+    transition: color .3s;
+}
+#link:hover{
+    color: #72AEC8;
+}
+
+
+
+
+.phone-shop>a>span{
+    text-decoration: underline;
+}
+.type+p{
+    color: #72AEC8;
+}
+.type{
+    transition: all 0.3s;
+}
+.type:hover{
+    color: #72AEC8;
+    cursor: pointer;
+}
+.button{
+    transform: translate(0,-110px);
+    opacity: 0;
+    transition: all 0.6s ;
+    width: 70%;
+    align-self: center;
+}
+.content:hover>span>button{
+    opacity: 1;
+    transform: translate(0,-120px);
+}
+.phone-shop+div>div:hover>span>button{
+    opacity: 1;
+    transform: translate(0,-120px);
+}
+
+@media screen and (max-width:576px) {
+    .phone-image>img{
+        width: 100% !important;
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width:993px) {
+    .subscribe>input{
+        width: 75%;
+        height: 70px;
+    }
+    .subscribe>button{
+        width: 25%;
+        height: 70px;
+    }
+}
+.shop-img{
+    max-width: 100%;
+    transform: scaleY(1.22);
+}
+@media screen and (max-width:575px) {
+    .shop-img{
+        transform: scaleY(1);
+    }
+}
+.links{
+    text-decoration: none;
+    color: black;
+    transition: all .3s;
+}
+.links:hover{
+    color: #72AEC8;
+}

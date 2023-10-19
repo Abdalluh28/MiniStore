@@ -1,0 +1,62 @@
+#linkone>a{
+    color: #72AEC8;
+}
+.hoverlink:hover>a{
+    color: #72AEC8;
+}
+.cart{
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+}
+.cart>*{
+    color: black;
+    transition: all 0.3s;
+}
+.cart:hover>*{
+    color: #72AEC8;
+}
+
+
+.header{
+    background-color: #EDF1F3;
+    height: 200px;
+}
+.header>span{
+    font-size: 50px;
+}
+#link{
+    text-decoration: none;
+    color: black;
+    transition: color .3s;
+}
+#link:hover{
+    color: #72AEC8;
+}
+
+
+.office{
+    text-decoration: underline;
+}
+.button{
+    width: 30%;
+}
+
+
+.shop-img{
+    max-width: 100%;
+    transform: scaleY(1.22);
+}
+@media screen and (max-width:575px) {
+    .shop-img{
+        transform: scaleY(1);
+    }
+}
+.links{
+    text-decoration: none;
+    color: black;
+    transition: all .3s;
+}
+.links:hover{
+    color: #72AEC8;
+}
