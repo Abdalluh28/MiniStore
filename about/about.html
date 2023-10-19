@@ -295,11 +295,13 @@
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
         </script>
         <script>
-            if(localStorage.counter)
-            {
-                document.querySelectorAll(".counter")[0].innerHTML = localStorage.counter;
-                document.querySelectorAll(".counter")[1].innerHTML = localStorage.counter;
-            }
+            window.onload =  function() {
+                if(localStorage.counter)
+                {
+                    document.querySelectorAll(".counter")[0].innerHTML = localStorage.counter;
+                    document.querySelectorAll(".counter")[1].innerHTML = localStorage.counter;
+                }
+            };
         </script>
     </body>
 

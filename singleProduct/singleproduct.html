@@ -384,6 +384,13 @@
                     document.querySelectorAll(".number>input")[id].value--;
                 }
             }
+            window.onload =  function() {
+                if(localStorage.counter)
+                {
+                    document.querySelectorAll(".counter")[0].innerHTML = localStorage.counter;
+                    document.querySelectorAll(".counter")[1].innerHTML = localStorage.counter;
+                }
+            };
         </script>
 
     </body>

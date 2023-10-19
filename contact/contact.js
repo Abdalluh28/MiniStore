@@ -1,8 +1,10 @@
-if(localStorage.counter)
+window.onload =  function() {
+    if(localStorage.counter)
     {
         document.querySelectorAll(".counter")[0].innerHTML = localStorage.counter;
         document.querySelectorAll(".counter")[1].innerHTML = localStorage.counter;
-}
+    }
+};
 
 
 function checkName(e)

@@ -296,18 +296,21 @@
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
         </script>
         <script>
-            if(localStorage.counter)
+            window.onload = function()
             {
-                document.querySelector(".products").innerHTML = "TOTAL PRODUCTS: "+localStorage.counter;
-                document.querySelector(".total").innerHTML = "TOTAL PRICE: $"+localStorage.cost;
-            }
-            else
-            {
-                document.querySelector(".products").innerHTML = "TOTAL PRODUCTS: 0";
-                document.querySelector(".total").innerHTML = "TOTAL PRICE: $0";
-            }
-            document.querySelectorAll(".counter")[0].innerHTML = localStorage.counter;
-            document.querySelectorAll(".counter")[1].innerHTML = localStorage.counter;
+                if(localStorage.counter)
+                {
+                    document.querySelector(".products").innerHTML = "TOTAL PRODUCTS: "+localStorage.counter;
+                    document.querySelector(".total").innerHTML = "TOTAL PRICE: $"+localStorage.cost;
+                }
+                else
+                {
+                    document.querySelector(".products").innerHTML = "TOTAL PRODUCTS: 0";
+                    document.querySelector(".total").innerHTML = "TOTAL PRICE: $0";
+                }
+                document.querySelectorAll(".counter")[0].innerHTML = localStorage.counter;
+                document.querySelectorAll(".counter")[1].innerHTML = localStorage.counter;
+            };
         </script>
 
     </body>

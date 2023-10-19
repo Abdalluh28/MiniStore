@@ -99,15 +99,14 @@ function cartNumbers(product)
     putProductsInCart(product);
 }
 
-function onLoadNums()
-{
+
+window.onload =  function() {
     if(localStorage.counter)
     {
         document.querySelectorAll(".counter")[0].innerHTML = localStorage.counter;
         document.querySelectorAll(".counter")[1].innerHTML = localStorage.counter;
     }
-}
-onLoadNums();
+};
 
 
 function putProductsInCart(product)
