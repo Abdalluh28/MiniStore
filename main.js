@@ -94,3 +94,11 @@ window.onload =  function() {
         document.querySelectorAll(".counter")[1].innerHTML = localStorage.counter;
     }
 };
+
+var perfEntries = performance.getEntriesByType("navigation");
+
+if (perfEntries[0].type === "back_forward") {
+    location.reload();
+}
+
+

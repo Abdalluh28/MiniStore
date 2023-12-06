@@ -1,91 +1,134 @@
-var carts = document.querySelectorAll(".content>span>button");
+/* start of adding items */
 
-
-
-items = [
-    {
-        "id" : 1,
-        "title" : "IPHONE 10",
-        "price" : 980,
-        "img" : "../imgs/product-item1.jpg",
-        "incart" : 0
-    },
-    {
-        "id" : 2,
-        "title" : "IPHONE 11",
-        "price" : 1100,
-        "img" : "../imgs/product-item2.jpg",
-        "incart" : 0
-    },
-    {
-        "id" : 3,
-        "title" : "IPHONE 8",
-        "price" : 780,
-        "img" : "../imgs/product-item3.jpg",
-        "incart" : 0
-    },
-    {
-        "id" : 4,
-        "title" : "IPHONE 13",
-        "price" : 1500,
-        "img" : "../imgs/product-item4.jpg",
-        "incart" : 0
-    },
-    {
-        "id" : 5,
-        "title" : "IPHONE 12",
-        "price" : 1300,
-        "img" : "../imgs/product-item5.jpg",
-        "incart" : 0
-    },
-    {
-        "id" : 6,
-        "title" : "PINK WATCH",
-        "price" : 870,
-        "img" : "../imgs/product-item6.jpg",
-        "incart" : 0
-    },
-    {
-        "id" : 7,
-        "title" : "HEAVY WATCH",
-        "price" : 680,
-        "img" : "../imgs/product-item7.jpg",
-        "incart" : 0
-    },
-    {
-        "id" : 8,
-        "title" : "SPOTTED WATCH",
-        "price" : 750,
-        "img" : "../imgs/product-item8.jpg",
-        "incart" : 0
-    },
-    {
-        "id" : 9,
-        "title" : "BLACK WATCH",
-        "price" : 650,
-        "img" : "../imgs/product-item9.jpg",
-        "incart" : 0
-    },
-    {
-        "id" : 10,
-        "title" : "SMART WATCH",
-        "price" : 750,
-        "img" : "../imgs/product-item10.jpg",
-        "incart" : 0
-    }
-]
-
-
-for(let i=0; i<carts.length;i++)
-{
-    carts[i].addEventListener("click", function()
-    {
-        cartNumbers(items[i]);
-        totalCost(items[i]);
+var carts ; 
+let items ;
+var products = [];
+var j=1;
+fetch("../products.json").then( (data) => {
+    items =  data.json();
+    return items;
+}).then( (items) => {
+    items.forEach(element => {
+        element.id = j;
+        j++;
+        element.incart = 0;
+        addToBody(element);
+        carts = document.querySelectorAll(".addToCart");
+        products.push(element);
     });
+})
+
+
+
+function addToBody(item)
+{
+    let one = JSON.stringify(item);
+    let discount = (item.originalPrice - item.price) / item.originalPrice * 100;
+    discount = Math.floor(discount);
+    let element = document.createElement("div");
+    element.innerHTML += `
+        <div class = "h-50 d-flex justify-content-center img-container" onclick='goToSingleProduct(${one})'>
+            <img src = "${item.image}" class="img-fluid">
+        </div>
+        <hr onclick='goToSingleProduct(${one})'>
+        <div class="d-flex justify-content-between align-items-center ms-2" onclick='goToSingleProduct(${one})'>
+            <p class="name"> ${item.name} </p>
+            <div class="d-flex">
+                <p class="me-2"> ${item.stars} </p>
+                <i class="fa-solid fa-star mt-1"></i>
+            </div>
+        </div>
+        <div class="d-flex ms-2" onclick='goToSingleProduct(${one})'>
+            <p class="price me-4"> $${item.price} </p>
+            <p class="original opacity-50 me-4"> $${item.originalPrice} </p>
+            <p class="discount me-4"> (${discount}% off) </p>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-primary addToCart w-75" onclick='cartNumbers(${one}); totalCost(${item.price})'>Add To Cart</button>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+            <button class="btn btn-primary addToFav w-75">Add To favourites</button>
+        </div>
+    `;
+    document.querySelector(".products").appendChild(element);
 }
+
+/* end of adding items */
+
+/* start of filters */
+
+function filterProducts(e,name="",filter="")
+{
+    if(filter==="company")
+    {
+        document.getElementById("all").checked = true;
+        if(e.value!="All")
+        {
+            document.querySelector(".products").innerHTML = "";
+            items.then ( (items) => {
+                items.forEach( (item) => {
+                    if(item.company === e.value)
+                        addToBody(item);
+                })
+            })
+        }
+        else
+        {
+            document.querySelector(".products").innerHTML = "";
+            items.then ( (items) => {
+                items.forEach( (item) => {
+                    addToBody(item);
+                })
+            })
+        }
+    }
+    if(filter==="category")
+    {
+        document.getElementsByTagName("select")[0].value = 'All';
+        if(e.checked)
+        {
+            document.querySelector(".products").innerHTML = "";
+            items.then ( (items) => {
+                items.forEach( (item) => {
+                    if(item.category === name)
+                        addToBody(item);
+                })
+            })
+        }
+        else
+        {
+            document.querySelector(".products").innerHTML = "";
+            items.then ( (items) => {
+                items.forEach( (item) => {
+                    addToBody(item);
+                })
+            })
+        }
+    } 
+}
+
+function clearFilters()
+{
+    document.getElementById("all").checked = true;
+    document.getElementsByTagName("select")[0].value = 'All';
+    document.querySelector(".products").innerHTML = "";
+    items.then ( (items) => {
+        items.forEach( (item) => {
+            addToBody(item);
+        })
+    })
+};
+
+/* end of filters */
+
+
+
+/* start of adding in cart */
+
+
 function cartNumbers(product)
 {
+    console.log(product)
     if(localStorage.counter )
     {
         var nums = localStorage.getItem("counter") ;
@@ -115,20 +158,20 @@ function putProductsInCart(product)
     cartitems = JSON.parse(cartitems);
     if((cartitems != null))
     {
-        if(cartitems[product.title] == undefined)
+        if(cartitems[product.name] == undefined)
         {
             cartitems = {
                 ...cartitems,
-                [product.title] : product
+                [product.name] : product
             }
         }
-        cartitems[product.title].incart += 1;
+        cartitems[product.name].incart = parseInt(cartitems[product.name].incart) + 1;
     }
     else
     {
         product.incart = 1;
         cartitems = { 
-            [product.title] : product
+            [product.name] : product
         }
     }
     localStorage.productInCart = JSON.stringify(cartitems);
@@ -136,16 +179,39 @@ function putProductsInCart(product)
 
 
 var temp = 0;
-function totalCost(product)
+function totalCost(price)
 {
     if(localStorage.cost)
     {
-        temp = parseInt(product.price) ;
+        temp = parseInt(price) ;
         localStorage.cost = parseInt(localStorage.cost)+ temp;
     }
     else
     {
-        localStorage.cost = parseInt(product.price);
+        localStorage.cost = parseInt(price);
     }
     
 }
+
+/* end of adding in cart */
+
+
+
+/* start of single product */
+
+function goToSingleProduct(item)
+{
+    console.log(products[item.id])
+    localStorage.productOne = JSON.stringify(item);
+    if(item.id === 50)
+        localStorage.productTwo = JSON.stringify(products[item.id-3]);
+    else
+        localStorage.productTwo = JSON.stringify(products[item.id]);//after
+    if(item.id === 1)
+        localStorage.productThree = JSON.stringify(products[item.id+1]);
+    else
+        localStorage.productThree = JSON.stringify(products[item.id-2]);//before
+    location.href = "../singleProduct/singleProduct.html";
+}
+
+/* end of single product */

@@ -21,8 +21,8 @@ function displayCart()
             products.innerHTML += `
             <div class="row content">
                 <div class="col-4 d-flex align-items-center">
-                    <div class="img"><img src="${item.img}" alt=""></div>
-                    <p class="title ms-4">${item.title}</p>
+                    <div class="img"><img src="${item.image}" alt=""></div>
+                    <p class="title ms-4">${item.name}</p>
                 </div>
                 <div class="col-4 d-flex align-items-center">
                     <i class="fa-solid fa-plus me-4" onclick="plusOrMinus(${item.id},1)"></i>
@@ -58,7 +58,7 @@ function plusOrMinus(num,plus)
     Object.values(cartItems).map(item => {
         if((item.id == num) && (plus == 1))
         {
-            newItems[item.title].incart += 1;
+            newItems[item.name].incart += 1;
             localStorage.counter = parseInt(localStorage.counter) + 1;
             localStorage.cost = parseInt(localStorage.cost) + item.price;
             document.querySelectorAll(".counter")[0].innerHTML = localStorage.counter;
@@ -66,14 +66,14 @@ function plusOrMinus(num,plus)
         }
         else if((item.id == num) && (plus != 1))
         {
-            newItems[item.title].incart -= 1;
+            newItems[item.name].incart -= 1;
             localStorage.counter = parseInt(localStorage.counter) - 1;
             localStorage.cost = parseInt(localStorage.cost) - item.price;
             document.querySelectorAll(".counter")[0].innerHTML = localStorage.counter;
             document.querySelectorAll(".counter")[1].innerHTML = localStorage.counter;
-            if(newItems[item.title].incart == 0)
+            if(newItems[item.name].incart == 0)
             {
-                delete newItems[item.title];
+                delete newItems[item.name];
             }
         }
     });
@@ -90,7 +90,7 @@ function removeItem(num)
         {
             newItems = {
                 ...newItems,
-                [item.title] : item
+                [item.name] : item
             };
         }
         else

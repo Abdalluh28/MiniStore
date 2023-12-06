@@ -14,223 +14,152 @@
     <body>
         <nav class="navbar d-none d-md-block navbar-expand-md navbar-light bg-light py-4 sticky-top">
             <div class="container">
-                <a class="navbar-brand" href="../index.html"><img src="../imgs/main-logo.png" alt="" class="img-fluid"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
-                        <li class="nav-item hoverlink" id="linkone">
-                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                        </li>
-                        <li class="nav-item hoverlink">
-                            <a class="nav-link" href="#services">SERVICES</a>
-                        </li>
-                        <li class="nav-item hoverlink">
-                            <a class="nav-link" href="#products">PRODUCTS</a>
-                        </li>
-                        <li class="nav-item hoverlink">
-                            <a class="nav-link" href="#watches">WATCHES</a>
-                        </li>
-                        <li class="nav-item hoverlink">
-                            <a class="nav-link" href="#sale">SALE</a>
-                        </li>
-                        <li class="nav-item hoverlink">
-                            <a class="nav-link" href="#blog">BLOG</a>
-                        </li>
-                        <li class="nav-item dropdown hoverlink">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                PAGES
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="../about/about.html">ABOUT</a></li>
-                                <li><a class="dropdown-item" href="../shop/shop.html">SHOP</a></li>
-                                <li><a class="dropdown-item" href="../cart.html">CART</a></li>
-                                <li><a class="dropdown-item" href="../checkOut/checkout.html">CHECKOUT</a></li>
-                                <li><a class="dropdown-item" href="#">SINGLE PRODUCT</a></li>
-                                <li><a class="dropdown-item" href="../contact/contact.html">CONTACT</a></li>
-                            </ul>
-                        </li>
+              <a class="navbar-brand" href="../index.html"><img src="../imgs/main-logo.png" alt="" class="img-fluid"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+                  
+                  <div class="nav-item dropdown hoverlink">
+                    <a class="nav-link dropdown-toggle mt-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      PAGES
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="../about/about.html">ABOUT</a></li>
+                      <li><a class="dropdown-item" href="../shop/shop.html">SHOP</a></li>
+                      <li><a class="dropdown-item" href="../cart/cart.html">CART</a></li>
+                      <li><a class="dropdown-item" href="../checkOut/checkout.html">CHECKOUT</a></li>
+                      <li><a class="dropdown-item" href="#">SINGLE PRODUCT</a></li>
+                      <li><a class="dropdown-item" href="../contact/contact.html">CONTACT</a></li>
                     </ul>
-                    <div class="d-flex mt-2">
-                        <a class="cart" href="../cart/cart.html">
-                            <i class="fa-solid fa-cart-shopping m-2"></i>
-                            <p class="counter"></p>
-                        </a>
-                    </div>
+                  </div>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
+                    Sign In
+                  </button>                
                 </div>
+                <div class="d-flex mt-2">
+                    <a class="cart" href="../cart/cart.html">
+                      <i class="fa-solid fa-cart-shopping m-2"></i>
+                      <p class="counter"></p>
+                    </a>
+                </div>
+              </div>
             </div>
         </nav>
         <nav class="navbar d-md-none navbar-light bg-light fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html">MiniStore</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                    aria-controls="offcanvasNavbar" title="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MiniStore</h5>
-                        <div class="d-flex mt-2">
-                            <a class="cart" href="../cart/cart.html">
-                                <i class="fa-solid fa-cart-shopping m-2"></i>
-                                <p class="counter"></p>
-                            </a>
-                        </div>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
-                            <li class="nav-item hoverlink" id="linkone">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item hoverlink">
-                                <a class="nav-link" href="#">SERVICES</a>
-                            </li>
-                            <li class="nav-item hoverlink">
-                                <a class="nav-link" href="#">PRODUCTS</a>
-                            </li>
-                            <li class="nav-item hoverlink">
-                                <a class="nav-link" href="#">WATCHES</a>
-                            </li>
-                            <li class="nav-item hoverlink">
-                                <a class="nav-link" href="#">SALE</a>
-                            </li>
-                            <li class="nav-item hoverlink">
-                                <a class="nav-link" href="#">BLOG</a>
-                            </li>
-                            <li class="nav-item dropdown hoverlink">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    PAGES
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="../about/about.html">ABOUT</a></li>
-                                    <li><a class="dropdown-item" href="../shop/shop.html">SHOP</a></li>
-                                    <li><a class="dropdown-item" href="../cart.html">CART</a></li>
-                                    <li><a class="dropdown-item" href="../checkOut/checkout.html">CHECKOUT</a></li>
-                                    <li><a class="dropdown-item" href="#">SINGLE PRODUCT</a></li>
-                                    <li><a class="dropdown-item" href="../contact/contact.html">CONTACT</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">MiniStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar" title="button">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MiniStore</h5>
+                <div class="d-flex mt-2">
+                    <a class="cart" href="../cart/cart.html">
+                      <i class="fa-solid fa-cart-shopping m-2"></i>
+                      <p class="counter badge bg-warning"></p>
+                    </a>
                 </div>
+                <div class="d-flex mt-2">
+                  <a class="cart" href="../cart/cart.html">
+                    <i class="fa-regular fa-heart m-2"></i>
+                    <p class="fav-counter badge bg-warning"></p>
+                  </a>
+                </div>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
+                    Sign In
+                  </button>              
+                </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
+                  <li class="nav-item hoverlink"  >
+                    <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                  </li>
+                  <li class="nav-item hoverlink">
+                    <a class="nav-link" href="../about/about.html">ABOUT</a>
+                  </li>
+                  <li class="nav-item hoverlink">
+                    <a class="nav-link" href="../shop/shop.html">SHOP</a>
+                  </li>
+                  <li class="nav-item hoverlink">
+                    <a class="nav-link" href="../cart/cart.html">CART</a>
+                  </li>
+                  <li class="nav-item hoverlink">
+                    <a class="nav-link" href="../checkOut/checkout.html">CHECK OUT</a>
+                  </li>
+                  <li class="nav-item hoverlink" id="linkone">
+                    <a class="nav-link" href="#">SINGEL PRODUCT</a>
+                  </li>
+                  <li class="nav-item hoverlink">
+                    <a class="nav-link" href="../contact/contact.html">CONTACT</a>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
         </nav>
-
-
-
-
-        <div id="carouselId" class="carousel" data-bs-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true"
-                    aria-label="First slide"></li>
-                <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
-                <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <div class="container mt-5">
-                        <div class="row">
-                            <div class="col-lg-5 image">
-                                <img src="../imgs/product-item6.jpg" alt="">
-                            </div>
-                            <div class="col-lg-5 d-flex flex-column">
-                                <h3 class="mb-3">PINK WATCH</h3>
-                                <p class="mb-3">
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>5.3</span>
-                                </p>
-                                <p class="price mb-4">$870.00</p>
-                                <p class="opacity-50 mb-4">Justo, cum feugiat imperdiet nulla molestie ac vulputate
-                                    scelerisque amet. Bibendum adipiscing platea blandit sit sed quam semper rhoncus. Diam
-                                    ultrices maecenas consequat eu tortor orci, cras lectus mauris, cras egestas quam
-                                    venenatis neque.</p>
-                                <div class="d-flex align-items-center number mb-4">
-                                    <i class="fa-solid fa-minus me-3" onclick="editValue(0,0)"></i>
-                                    <input type="text" name="" class="form-control" value="1">
-                                    <i class="fa-solid fa-plus ms-3" onclick="editValue(1,0)"></i>
-                                </div>
-                                <button class="btn btn-dark mb-5" onclick="location.href='../shop/shop.html'">GO TO
-                                    SHOP</button>
-                                <div class="mb-3">SKU: 1223</div>
-                                <div class="mb-3">Category: Watch,Screen touch</div>
-                                <div class="mb-3">Tags: Classic,Modern</div>
-                            </div>
-                        </div>
+            
+        
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false"><!--make the model does not closed if we clicked any where in the page-->
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <p>SIGN IN</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container mt-5">
-                        <div class="row">
-                            <div class="col-lg-5 image">
-                                <img src="../imgs/product-item8.jpg" alt="">
-                            </div>
-                            <div class="col-lg-5 d-flex flex-column">
-                                <h3 class="mb-3">SPOTTED WATCH</h3>
-                                <p class="mb-3">
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>5.3</span>
-                                </p>
-                                <p class="price mb-4">$750.00</p>
-                                <p class="opacity-50 mb-4">Justo, cum feugiat imperdiet nulla molestie ac vulputate
-                                    scelerisque amet. Bibendum adipiscing platea blandit sit sed quam semper rhoncus. Diam
-                                    ultrices maecenas consequat eu tortor orci, cras lectus mauris, cras egestas quam
-                                    venenatis neque.</p>
-                                <div class="d-flex align-items-center number mb-4">
-                                    <i class="fa-solid fa-minus me-3" onclick="editValue(0,1)"></i>
-                                    <input type="text" name="" class="form-control" value="1">
-                                    <i class="fa-solid fa-plus ms-3" onclick="editValue(1,1)"></i>
-                                </div>
-                                <button class="btn btn-dark mb-5" onclick="location.href='../shop/shop.html'">GO TO
-                                    SHOP</button>
-                                <div class="mb-3">SKU: 1223</div>
-                                <div class="mb-3">Category: Watch,Screen touch</div>
-                                <div class="mb-3">Tags: Classic,Modern</div>
-                            </div>
+                    <div class="modal-body">
+                        
+                      <form action="" method="post">
+                        <div class="form-floating">
+                          <input type="text" name="username" id="username" class="form-control" placeholder="username">
+                          <label for="username">User Name</label>
                         </div>
+                        <div class="form-floating">
+                          <input type="text" name="password" id="password" class="form-control" placeholder="password">
+                          <label for="password">Password</label>
+                        </div>
+                      </form>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container mt-5">
-                        <div class="row">
-                            <div class="col-lg-5 image">
-                                <img src="../imgs/product-item4.jpg" alt="">
-                            </div>
-                            <div class="col-lg-5 d-flex flex-column">
-                                <h3 class="mb-3">IPHONE 13</h3>
-                                <p class="mb-3">
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>5.5</span>
-                                </p>
-                                <p class="price mb-4">$1500.00</p>
-                                <p class="opacity-50 mb-4">Justo, cum feugiat imperdiet nulla molestie ac vulputate
-                                    scelerisque amet. Bibendum adipiscing platea blandit sit sed quam semper rhoncus. Diam
-                                    ultrices maecenas consequat eu tortor orci, cras lectus mauris, cras egestas quam
-                                    venenatis neque.</p>
-                                <div class="d-flex align-items-center number mb-4">
-                                    <i class="fa-solid fa-minus me-3" onclick="editValue(0,2)"></i>
-                                    <input type="text" name="" class="form-control" value="1">
-                                    <i class="fa-solid fa-plus ms-3" onclick="editValue(1,2)"></i>
-                                </div>
-                                <button class="btn btn-dark mb-5" onclick="location.href='../shop/shop.html'">GO TO
-                                    SHOP</button>
-                                <div class="mb-3">SKU: 1223</div>
-                                <div class="mb-3">Category: PHONE, IPHONE</div>
-                                <div class="mb-3">Tags: Classic,Modern</div>
-                            </div>
-                        </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save</button>
                     </div>
                 </div>
             </div>
         </div>
 
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 image" id="imgOne">
+                    <img src="" alt="">
+                </div>
+                <div class="col-lg-5 d-flex flex-column">
+                    <h3 class="mb-3" id="headOne"></h3>
+                    <p class="mb-3">
+                        <i class="fa-solid fa-star"></i>
+                        <span id="starsOne"></span>
+                    </p>
+                    <p class="price mb-4" id="priceOne"></p>
+                    <p class="mb-4" id="descriptionOne"></p>
+                    <div class="d-flex align-items-center number mb-4">
+                        <i class="fa-solid fa-minus me-3" onclick="editValue(0,0)"></i>
+                        <input type="text" name="" class="form-control" value="1" onkeydown="checkValue(event)">
+                        <i class="fa-solid fa-plus ms-3" onclick="editValue(1,0)"></i>
+                    </div>
+                    <button class="btn btn-dark mb-5" >Add To Cart</button>
+                    <div class="mb-3">Category: <span id="categoryOne"></span></div>
+                </div>
+            </div>
+        </div>
 
 
      
@@ -376,21 +305,18 @@
         </script>
         <script src="../shop/shop.js"></script>
         <script src="../main.js"></script>
+        <script src="singleProduct.js"></script>
         <script>
-            function editValue(num, id) {
-                if (num == 1) {
-                    document.querySelectorAll(".number>input")[id].value++;
-                } else {
-                    document.querySelectorAll(".number>input")[id].value--;
-                }
-            }
-            window.onload =  function() {
-                if(localStorage.counter)
-                {
-                    document.querySelectorAll(".counter")[0].innerHTML = localStorage.counter;
-                    document.querySelectorAll(".counter")[1].innerHTML = localStorage.counter;
-                }
-            };
+            var modalId = document.getElementById('modalId');
+        
+            modalId.addEventListener('show.bs.modal', function (event) {
+                  // Button that triggered the modal
+                  let button = event.relatedTarget;
+                  // Extract info from data-bs-* attributes
+                  let recipient = button.getAttribute('data-bs-whatever');
+        
+                // Use above variables to manipulate the DOM
+            });
         </script>
 
     </body>

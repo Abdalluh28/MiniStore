@@ -1,9 +1,17 @@
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 #linkone>a{
     color: #72AEC8;
 }
 .hoverlink:hover>a{
     color: #72AEC8;
 }
+
+/* start of cart and badge */
 .cart{
     cursor: pointer;
     text-decoration: none;
@@ -13,9 +21,19 @@
     color: black;
     transition: all 0.3s;
 }
-.cart:hover>*{
+.cart:hover>i{
     color: #72AEC8;
 }
+
+.cart>i{
+    transform: scale(2);
+}
+.badge{
+    transform: translate(-20px,-10px);
+    border-radius: 50%;
+}
+/* end of cart and badge */
+
 
 
 .image>img{

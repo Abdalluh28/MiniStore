@@ -14,116 +14,127 @@
     <body>
         <nav class="navbar d-none d-md-block navbar-expand-md navbar-light bg-light py-4 sticky-top">
             <div class="container">
-                <a class="navbar-brand" href="../index.html"><img src="../imgs/main-logo.png" alt="" class="img-fluid"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
-                        <li class="nav-item hoverlink" id="linkone">
-                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                        </li>
-                        <li class="nav-item hoverlink">
-                            <a class="nav-link" href="#services">SERVICES</a>
-                        </li>
-                        <li class="nav-item hoverlink">
-                            <a class="nav-link" href="#products">PRODUCTS</a>
-                        </li>
-                        <li class="nav-item hoverlink">
-                            <a class="nav-link" href="#watches">WATCHES</a>
-                        </li>
-                        <li class="nav-item hoverlink">
-                            <a class="nav-link" href="#sale">SALE</a>
-                        </li>
-                        <li class="nav-item hoverlink">
-                            <a class="nav-link" href="#blog">BLOG</a>
-                        </li>
-                        <li class="nav-item dropdown hoverlink">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                PAGES
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="../about/about.html">ABOUT</a></li>
-                                <li><a class="dropdown-item" href="../shop/shop.html">SHOP</a></li>
-                                <li><a class="dropdown-item" href="#">CART</a></li>
-                                <li><a class="dropdown-item" href="../checkOut/checkout.html">CHECKOUT</a></li>
-                                <li><a class="dropdown-item" href="../singleProduct/singleproduct.html">SINGLE PRODUCT</a></li>
-                                <li><a class="dropdown-item" href="../contact/contact.html">CONTACT</a></li>
-                            </ul>
-                        </li>
+              <a class="navbar-brand" href="../index.html"><img src="../imgs/main-logo.png" alt="" class="img-fluid"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+                  
+                  <div class="nav-item dropdown hoverlink">
+                    <a class="nav-link dropdown-toggle mt-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      PAGES
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="../about/about.html">ABOUT</a></li>
+                      <li><a class="dropdown-item" href="../shop/shop.html">SHOP</a></li>
+                      <li><a class="dropdown-item" href="#">CART</a></li>
+                      <li><a class="dropdown-item" href="../checkOut/checkout.html">CHECKOUT</a></li>
+                      <li><a class="dropdown-item" href="../singleProduct/singleproduct.html">SINGLE PRODUCT</a></li>
+                      <li><a class="dropdown-item" href="../contact/contact.html">CONTACT</a></li>
                     </ul>
-                    <div class="d-flex mt-2">
-                        <a class="cart" href="#">
-                            <i class="fa-solid fa-cart-shopping m-2"></i>
-                            <p class="counter"></p>
-                        </a>
-                    </div>
+                  </div>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
+                    Sign In
+                  </button>                
                 </div>
+                <div class="d-flex mt-2">
+                    <a class="cart" href="../cart/cart.html">
+                      <i class="fa-solid fa-cart-shopping m-2"></i>
+                      <p class="counter"></p>
+                    </a>
+                </div>
+              </div>
             </div>
         </nav>
         <nav class="navbar d-md-none navbar-light bg-light fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html">MiniStore</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                    aria-controls="offcanvasNavbar" title="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MiniStore</h5>
-                        <div class="d-flex mt-2">
-                            <a class="cart" href="#">
-                                <i class="fa-solid fa-cart-shopping m-2"></i>
-                                <p class="counter"></p>
-                            </a>
-                        </div>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">MiniStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar" title="button">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MiniStore</h5>
+                <div class="d-flex mt-2">
+                  <a class="cart" href="../cart/cart.html">
+                    <i class="fa-solid fa-cart-shopping m-2"></i>
+                    <p class="counter badge bg-warning"></p>
+                  </a>
+              </div>
+              <div class="d-flex mt-2">
+                <a class="cart" href="../cart/cart.html">
+                  <i class="fa-regular fa-heart m-2"></i>
+                  <p class="fav-counter badge bg-warning"></p>
+                </a>
+              </div>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-outline-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
+                    Sign In
+                  </button>              
+                </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
+                  <li class="nav-item hoverlink"  >
+                    <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                  </li>
+                  <li class="nav-item hoverlink">
+                    <a class="nav-link" href="../about/about.html">ABOUT</a>
+                  </li>
+                  <li class="nav-item hoverlink">
+                    <a class="nav-link" href="../shop/shop.html">SHOP</a>
+                  </li>
+                  <li class="nav-item hoverlink" id="linkone">
+                    <a class="nav-link" href="../cart/cart.html">CART</a>
+                  </li>
+                  <li class="nav-item hoverlink">
+                    <a class="nav-link" href="../checkOut/checkout.html">CHECK OUT</a>
+                  </li>
+                  <li class="nav-item hoverlink">
+                    <a class="nav-link" href="../singleProduct/singleproduct.html">SINGEL PRODUCT</a>
+                  </li>
+                  <li class="nav-item hoverlink">
+                    <a class="nav-link" href="../contact/contact.html">CONTACT</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+            
+        
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false"><!--make the model does not closed if we clicked any where in the page-->
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <p>SIGN IN</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
-                            <li class="nav-item hoverlink" id="linkone">
-                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                            </li>
-                            <li class="nav-item hoverlink">
-                                <a class="nav-link" href="#services">SERVICES</a>
-                            </li>
-                            <li class="nav-item hoverlink">
-                                <a class="nav-link" href="#products">PRODUCTS</a>
-                            </li>
-                            <li class="nav-item hoverlink">
-                                <a class="nav-link" href="#watches">WATCHES</a>
-                            </li>
-                            <li class="nav-item hoverlink">
-                                <a class="nav-link" href="#sale">SALE</a>
-                            </li>
-                            <li class="nav-item hoverlink">
-                                <a class="nav-link" href="#blog">BLOG</a>
-                            </li>
-                            <li class="nav-item dropdown hoverlink">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    PAGES
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="../about/about.html">ABOUT</a></li>
-                                    <li><a class="dropdown-item" href="../shop/shop.html">SHOP</a></li>
-                                    <li><a class="dropdown-item" href="#">CART</a></li>
-                                    <li><a class="dropdown-item" href="../checkOut/checkout.html">CHECKOUT</a></li>
-                                    <li><a class="dropdown-item" href="../singleProduct/singleproduct.html">SINGLE PRODUCT</a></li>
-                                    <li><a class="dropdown-item" href="../contact/contact.html">CONTACT</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <div class="modal-body">
+                        
+                      <form action="" method="post">
+                        <div class="form-floating">
+                          <input type="text" name="username" id="username" class="form-control" placeholder="username">
+                          <label for="username">User Name</label>
+                        </div>
+                        <div class="form-floating">
+                          <input type="text" name="password" id="password" class="form-control" placeholder="password">
+                          <label for="password">Password</label>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save</button>
                     </div>
                 </div>
             </div>
-        </nav>
-
+        </div>
 
         <div class="container-fluid">
             <div class="row mb-5 header d-flex flex-column align-items-center justify-content-center">
@@ -226,6 +237,18 @@
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
         </script>
         <script src="cart.js"></script>
+        <script>
+            var modalId = document.getElementById('modalId');
+        
+            modalId.addEventListener('show.bs.modal', function (event) {
+                  // Button that triggered the modal
+                  let button = event.relatedTarget;
+                  // Extract info from data-bs-* attributes
+                  let recipient = button.getAttribute('data-bs-whatever');
+        
+                // Use above variables to manipulate the DOM
+            });
+        </script>
     </body>
 
 </html>
