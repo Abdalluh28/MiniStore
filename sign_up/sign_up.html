@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SignUP</title>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" -->
+            <!-- integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="sign_up.css">
+        <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/all.min.css">
+        <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css.map">
+        <!-- <script src="https://kit.fontawesome.com/3198d18499.js" crossorigin="anonymous"></script> -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../imgs/ecommerce.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../imgs/ecommerce.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../imgs/ecommerce.png">
+        <link rel="manifest" href="site.webmanifest">
+    </head>
+
+    <body>
+        <nav class="navbar d-none d-md-block navbar-expand-md navbar-light bg-light py-4 sticky-top">
+            <div class="container">
+              <a class="navbar-brand" href="../index.php"><img src="../imgs/main-logo.png" alt="" class="img-fluid"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+                  <div class="d-xl-flex d-none justify-content-center align-items-center btn-group">
+                    <a class="navbar-link" href="../index.php">HOME</a>
+                    <a class="navbar-link" href="../about/about.php">ABOUT</a>
+                    <a class="navbar-link" href="../shop/shop.php">SHOP</a>
+                    <a class="navbar-link" href="../cart/cart.php">CART</a>
+                    <a class="navbar-link" href="../checkOut/checkout.php">CHECKOUT</a>
+                    <a class="navbar-link" href="../singleProduct/singleproduct.php">SINGLE PRODUCT</a>
+                    <a class="navbar-link" href="../contact/contact.php">CONTACT</a>
+                  </div>
+                  <div class="nav-item dropdown hoverlink d-xl-none">
+                    <a class="nav-link dropdown-toggle mt-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      PAGES
+                    </a>
+                    
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="../index.php">HOME</a></li>
+                      <li><a class="dropdown-item" href="../about/about.php">ABOUT</a></li>
+                      <li><a class="dropdown-item" href="../shop/shop.php">SHOP</a></li>
+                      <li><a class="dropdown-item" href="../cart/cart.php">CART</a></li>
+                      <li><a class="dropdown-item" href="../checkOut/checkout.php">CHECKOUT</a></li>
+                      <li><a class="dropdown-item" href="../singleProduct/singleproduct.php">SINGLE PRODUCT</a></li>
+                      <li><a class="dropdown-item" href="../contact/contact.php">CONTACT</a></li>
+                    </ul>
+                  </div>
+                  
+                </div>
+                <div class="d-flex mt-2">
+                    <a class="cart" href="../cart/cart.php">
+                        <i class="fa-solid fa-cart-shopping m-2" style="font-size:2em;"></i>
+                        <p class="counter badge bg-warning" style="width:22.51px;height:22px; border-radius: 50% 50%;"></p>
+                    </a>
+                </div>
+              
+              </div>
+            </div>
+        </nav>
+        <nav class="navbar d-md-none navbar-light bg-light fixed-top">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../index.php">MiniStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar" title="button">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <div class="d-flex mt-2">
+                  <a class="cart" href="../cart/cart.php">
+                    <i class="fa-solid fa-cart-shopping m-2" style="font-size:2em;"></i>
+                    <p class="counter badge bg-warning" style="width:22.51px;height:22px; border-radius: 50% 50%;"></p>
+                  </a>
+                </div>
+                
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>         
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
+                  <li class="nav-item hoverlink"  >
+                    <a class="nav-link" aria-current="page" href="../index.php">Home</a>
+                  </li>
+                  <li class="nav-item hoverlink">
+                    <a class="nav-link" href="../about/about.php">ABOUT</a>
+                  </li>
+                  <li class="nav-item hoverlink">
+                    <a class="nav-link" href="../shop/shop.php">SHOP</a>
+                  </li>
+                  <li class="nav-item hoverlink">
+                    <a class="nav-link" href="../cart/cart.php">CART</a>
+                  </li>
+                  <li class="nav-item hoverlink"  id="linkone">
+                    <a class="nav-link" href="../checkOut/checkout.php">CHECK OUT</a>
+                  </li>
+                  <li class="nav-item hoverlink">
+                    <a class="nav-link" href="../singleProduct/singleproduct.php">SINGEL PRODUCT</a>
+                  </li>
+                  <li class="nav-item hoverlink">
+                    <a class="nav-link" href="../contact/contact.php">CONTACT</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="container-fluid">
+            <div class="row mb-5 header d-flex flex-column align-items-center justify-content-center">
+                <span class="col-12 d-flex justify-content-center align-items-center">SIGN UP</span>
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <a href="../index.php" id="link">HOME&nbsp;</a>
+                    <div>> SIGN UP</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <form class="row" action="sign_up.php" method="post" onkeydown="return event.key != 'Enter' ; ">
+                <h2 class="mb-5 col-12">USER DETAILS</h2>
+                <div class="form-floating mb-5 col-md-6 col-12">
+                    <input type="text" name="firstName" id="fn" class="form-control" placeholder="FirstName" onkeydown="checkName(event)" required>
+                    <label for="fn" class="ms-2">First Name:</label>
+                </div>
+                <div class="form-floating mb-5 col-md-6 col-12">
+                    <input type="text" name="lastName" id="ln" class="form-control" placeholder="LastName" onkeydown="checkName(event)" required>
+                    <label for="ln" class="ms-2">Last Name:</label>
+                </div>
+                
+                <div class="mb-5 col-md-6 col-12">
+                    <select name="countryName" id="country" title="countryName" class="form-select" required>
+                        <option value="open" disabled selected>Country Name</option>
+                        <option value="uk">United States</option>
+                        <option value="egypt">Egypt</option>
+                        <option value="kanda">Kanda</option>
+                        <option value="australia">Australia</option>
+                    </select>
+                </div>
+                
+                <div class=" col-md-6 col-12 mb-4">
+                  <p>Male or Female</p>
+                  <input type="radio" name="gender" class="gender" id="male" value = "1" >
+                  <label for="male">Male</label> <br>
+                  <input type="radio" name="gender" class="gender" id="female" value = "0"  >
+                  <label for="female">Female</label>
+                </div>
+                
+                <div class="form-floating mb-5 col-md-6 col-12">
+                    <input type="password" name="pass" id="pass" class="form-control" placeholder="password"  onblur="checkpassword(this)" required>
+                    <label for="pass" class="ms-2">password</label>
+                </div>
+                <div class="form-floating mb-5 col-md-6 col-12">
+                    <input type="password" name="passTwo" id="passTwo" class="form-control" placeholder="password" onblur="checkPass(event)" required>
+                    <label for="passTwo" class="ms-2">confirm password</label>
+                </div>
+                <div class="mb-5 col-12 d-none wrongPass" >
+                    please enter your password coorectly
+                </div>
+                <div class="form-floating mb-5 col-md-6 col-12">
+                    <input type="text" name="phoneNumber" id="phone" class="form-control" placeholder="phoneNumber" onkeydown="checkPhone(event)" required>
+                    <label for="phone" class="ms-2">Phone</label>
+                </div>
+                <div class="form-floating mb-5 col-md-6 col-12">
+                    <input type="text" name="email" id="email" class="form-control" placeholder="email" onblur="checkEmail(this)" required>
+                    <label for="email" class="ms-2">Email</label>
+                </div>
+                
+                <!-- <input type="submit"> -->
+                <input type="submit" onclick="checkSubmit(event)" class="btn btn-dark bbb" >
+            </form>
+            <!-- end of form -->
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <footer class="container mb-5">
+          <div class="row">
+              <!-- Empty column to offset content -->
+              <div class="col-md-1"></div>
+              
+              <!-- Logo and Contact Information -->
+              <div class="col-md-3 col-6 mt-5">
+                  <!-- Logo -->
+                  <div class="col"><img src="../imgs/main-logo.png" alt=""></div>
+                  
+                  <!-- Short Description -->
+                  <p class="opacity-50 col">Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit hendrerit. Gravida massa
+                      volutpat aenean odio erat nullam fringilla.</p>
+                  
+                  <!-- Social Media Links -->
+                  <div class="col">
+                      <a href="https://www.facebook.com/abdo.khaled.98284/"><i class="fa-brands fa-facebook mx-3"></i></a>
+                      <a href="www.linkedin.com/in/abdo-khaled-34235b283"><i class="fa-brands fa-linkedin mx-3"></i></a>
+                  </div>
+              </div>
+              
+              <!-- Quick Links -->
+              <div class="col-md-3 col-6 d-flex flex-column  mt-5">
+                  <h5 class="my-1">QUICK LINKS</h5>
+                  <a href="../index.php" class="my-1 links">HOME</a>
+                  <a href="#" class="my-1 links">ABOUT</a>
+                  <a href="../shop/shop.php" class="my-1 links">SHOP</a>
+                  <a href="../contact/contact.php" class="my-1 links">CONTACT</a>
+              </div>
+              
+              <!-- Contact Information -->
+              <div class="col-md-3 col-6 mt-5">
+                  <h5>CONTACT US</h5>
+                  
+                  <!-- Email Section -->
+                  <div class="d-flex flex-column mb-3">
+                      <span class="opacity-50">Do you have any queries or suggestions?</span>
+                      <span><a href="mailto:abdelrhmanosama814@gmail.com" class="links">SEND EMAIL</a></span>
+                  </div>
+                  
+                  <!-- Phone Number Section -->
+                  <div class="d-flex flex-column mb-3">
+                      <span class="opacity-50">If you need support? Just give us a call.</span>
+                      <span><a href="#" class="links">0201020502664</a></span>
+                  </div>
+              </div>
+          </div>
+      </footer>
+
+
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script> -->
+        <script src = "../bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
+        <script src = "../bootstrap-5.1.3-dist/js/all.min.js"></script>
+        <script src="sign_up.js"></script>
+
+    </body>
+
+</html>

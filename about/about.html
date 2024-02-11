@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ABOUT</title>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" -->
+            <!-- integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="about.css">
+        <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/all.min.css">
+        <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css.map">
+        <!-- <script src="https://kit.fontawesome.com/3198d18499.js" crossorigin="anonymous"></script> -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../imgs/ecommerce.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../imgs/ecommerce.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../imgs/ecommerce.png">
+        <link rel="manifest" href="site.webmanifest">
+    </head>
+
+    <body>
+      <!-- Navigation Bar for Medium and Larger Screens -->
+      <nav class="navbar d-none d-md-block navbar-expand-md navbar-light bg-light py-4 sticky-top">
+        <!-- Container for the navigation bar content -->
+        <div class="container">
+          <!-- Brand/logo, linking to the home page -->
+          <a class="navbar-brand" href="../index.php"><img src="../imgs/main-logo.png" alt="" class="img-fluid"></a>
+          
+          <!-- Toggle button for collapsing navigation links on smaller screens -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <!-- Navigation links container -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navigation links for larger screens -->
+            <div class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+              <!-- Group of links for larger screens -->
+              <div class="d-xl-flex d-none justify-content-center align-items-center btn-group">
+                <a class="navbar-link" href="../index.php">HOME</a>
+                <a class="navbar-link" href="#">ABOUT</a>
+                <a class="navbar-link" href="../shop/shop.php">SHOP</a>
+                <a class="navbar-link" href="../cart/cart.php">CART</a>
+                <a class="navbar-link" href="../checkOut/checkout.php">CHECKOUT</a>
+                <a class="navbar-link" href="../singleProduct/singleproduct.php">SINGLE PRODUCT</a>
+                <a class="navbar-link" href="../contact/contact.php">CONTACT</a>
+              </div>
+              
+              <!-- Dropdown for pages on smaller screens -->
+              <div class="nav-item dropdown hoverlink d-xl-none">
+                <a class="nav-link dropdown-toggle mt-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  PAGES
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../index.php">HOME</a></li>
+                  <li><a class="dropdown-item" href="#">ABOUT</a></li>
+                  <li><a class="dropdown-item" href="../shop/shop.php">SHOP</a></li>
+                  <li><a class="dropdown-item" href="../cart/cart.php">CART</a></li>
+                  <li><a class="dropdown-item" href="../checkOut/checkout.php">CHECKOUT</a></li>
+                  <li><a class="dropdown-item" href="../singleProduct/singleproduct.php">SINGLE PRODUCT</a></li>
+                  <li><a class="dropdown-item" href="../contact/contact.php">CONTACT</a></li>
+                </ul>
+              </div>
+              
+              <!-- Button trigger modal for additional functionality -->
+              <?php require_once ("../BP.php");?>
+            </div>
+            
+            <!-- Cart icon and counter -->
+            <div class="d-flex mt-2">
+              <a class="cart" href="../cart/cart.php">
+                <i class="fa-solid fa-cart-shopping m-2" style="font-size:2em;"></i>
+                <p class="counter badge bg-warning" style="width:22.51px;height:22px; border-radius: 50% 50%;"></p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Navigation Bar for Small Screens -->
+      <nav class="navbar d-md-none navbar-light bg-light fixed-top">
+        <!-- Container for the navigation bar content -->
+        <div class="container-fluid">
+          <!-- Brand/logo, linking to the home page -->
+          <a class="navbar-brand" href="../index.php">MiniStore</a>
+          
+          <!-- Toggle button for off-canvas navigation -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" title="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <!-- Off-canvas navigation container -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <!-- Header section in the off-canvas navigation -->
+            <div class="offcanvas-header">
+              <!-- Cart icon and counter -->
+              <div class="d-flex mt-2">
+                <a class="cart" href="../cart/cart.php">
+                  <i class="fa-solid fa-cart-shopping m-2" style="font-size:2em;"></i>
+                  <p class="counter badge bg-warning" style="width:22.51px;height:22px; border-radius: 50% 50%;"></p>
+                </a>
+              </div>
+              
+              <!-- Button to trigger a modal -->
+              <?php include("../BP.php");?>
+              
+              <!-- Close button for the off-canvas navigation -->
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            
+            <!-- Body section in the off-canvas navigation -->
+            <div class="offcanvas-body">
+              <!-- Navigation links for smaller screens -->
+              <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
+                <li class="nav-item hoverlink">
+                  <a class="nav-link" aria-current="page" href="../index.php">Home</a>
+                </li>
+                <li class="nav-item hoverlink" id="linkone">
+                  <a class="nav-link" href="#">ABOUT</a>
+                </li>
+                <li class="nav-item hoverlink">
+                  <a class="nav-link" href="../shop/shop.php">SHOP</a>
+                </li>
+                <li class="nav-item hoverlink">
+                  <a class="nav-link" href="../cart/cart.php">CART</a>
+                </li>
+                <li class="nav-item hoverlink">
+                  <a class="nav-link" href="../checkOut/checkout.php">CHECK OUT</a>
+                </li>
+                <li class="nav-item hoverlink">
+                  <a class="nav-link" href="../singleProduct/singleproduct.php">SINGLE PRODUCT</a>
+                </li>
+                <li class="nav-item hoverlink">
+                  <a class="nav-link" href="../contact/contact.php">CONTACT</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Modal -->
+      <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <!-- Modal dialog container -->
+        <div class="modal-dialog" role="document">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <!-- Modal header with title and close button -->
+            <div class="modal-header">
+              <p>SIGN IN</p>
+              <!-- Close button to dismiss the modal -->
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- Modal body containing the sign-in form -->
+            <div class="modal-body">
+              <!-- Sign-in form with email and password fields -->
+              <form action="../sign.php" method="post">
+                <!-- Email input field with floating label -->
+                <div class="form-floating">
+                  <input type="email" name="email" id="email" class="form-control" placeholder="email">
+                  <label for="email">Email</label>
+                </div>
+                <!-- Password input field with floating label -->
+                <div class="form-floating mt-3">
+                  <input type="password" name="password" id="password" class="form-control" placeholder="password">
+                  <label for="password">Password</label>
+                </div>
+                <!-- Submit button for the form -->
+                <input class="btn btn-dark mt-3" type="submit">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header Section -->
+      <div class="container-fluid">
+        <!-- Header row with margin-bottom, flex layout, and alignment -->
+        <div class="row mb-5 header d-flex flex-column align-items-center justify-content-center">
+          <!-- Heading displaying "ABOUT" -->
+          <span class="col-12 d-flex justify-content-center align-items-center">ABOUT</span>
+          <!-- Navigation row with link to HOME and breadcrumb indicator -->
+          <div class="col-12 d-flex justify-content-center align-items-center">
+            <!-- Link to HOME -->
+            <a href="../index.php" id="link">HOME&nbsp;</a>
+            <!-- Breadcrumb indicator " > ABOUT" -->
+            <div>> ABOUT</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services Section -->
+      <div class="container mt-5 p-5" id="services">
+        <!-- Row for service items -->
+        <div class="row">
+          <!-- Service Item: FREE DELIVERY -->
+          <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center mb-5">
+            <!-- Icon for FREE DELIVERY -->
+            <i class="fa-solid fa-cart-shopping icon"></i>
+            <!-- Text for FREE DELIVERY -->
+            <div class="text">
+              <h6>FREE DELIVERY</h6>
+              <p>Consectetur adipi elit lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+
+          <!-- Service Item: QUALITY GUARANTEE -->
+          <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center mb-5">
+            <!-- Icon for QUALITY GUARANTEE -->
+            <i class="fa-solid fa-award icon"></i>
+            <!-- Text for QUALITY GUARANTEE -->
+            <div class="text">
+              <h6>QUALITY GUARANTEE</h6>
+              <p>Dolor sit amet orem ipsu mcons ectetur adipi elit.</p>
+            </div>
+          </div>
+
+          <!-- Service Item: DAILY OFFERS -->
+          <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center mb-5">
+            <!-- Icon for DAILY OFFERS -->
+            <i class="fa-solid fa-thumbtack icon"></i>
+            <!-- Text for DAILY OFFERS -->
+            <div class="text">
+              <h6>DAILY OFFERS</h6>
+              <p>Amet consectetur adipi elit loreme ipsum dolor sit.</p>
+            </div>
+          </div>
+
+          <!-- Service Item: 100% SECURE PAYMENT -->
+          <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center mb-5">
+            <!-- Icon for 100% SECURE PAYMENT -->
+            <i class="fa-solid fa-lock icon"></i>
+            <!-- Text for 100% SECURE PAYMENT -->
+            <div class="text">
+              <h6>100% SECURE PAYMENT</h6>
+              <p>Rem Lopsum dolor sit amet, consectetur adipi elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Row containing image and text -->
+        <div class="row d-flex align-items-center">
+            <!-- Column for the image -->
+            <div class="col-md-6 image">
+                <img src="../imgs/single-image3.jpg" alt="">
+            </div>
+            <!-- Column for the text content -->
+            <div class="col-md-6">
+                <h3 class="my-4">HOW WAS MINISTORE FOUND?</h3>
+                <p class="opacity-50 pa">Risus augue curabitur diam senectus congue velit et. Sed vitae metus nibh sit era. Nulla adipiscing pharetra pellentesque maecenas odio eros at. Et libero vulputate amet duis erat volutpat vitae eget. Sed vitae metus nibh sit era. Nulla adipiscing pharetra pellentesque maecenas odio eros at. Quam libero etiam et in ac at quis.</p>
+                <p class="opacity-50 pa">Sed vitae metus nibh sit era. Nulla adipiscing pharetra pellentesque maecenas odio eros at. Et libero vulputate amet duis erat volutpat vitae eget. Quam libero etiam et in ac at quis. Risus augue curabitur diam senectus congue velit et.</p>
+                <!-- Button to navigate to the shop -->
+                <button class="btn btn-dark button mt-4" onclick="location.href='../shop/shop.php'">GO TO SHOP</button>
+            </div>
+        </div>
+      </div>
+
+      <!-- Quotes Section -->
+      <div class="quote d-flex flex-column justify-content-center my-5 py-5">
+          <!-- Quote icon -->
+          <div class="quote-icon d-flex justify-content-center"><i class="fa-solid fa-quote-right"></i></div>
+          <!-- Carousel for quotes -->
+          <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+              <!-- Carousel Inner -->
+              <div class="carousel-inner">
+                  <!-- Quote Item 1 -->
+                  <div class="carousel-item active">
+                      <div class="d-flex justify-content-center align-items-center">
+                          <div class="d-flex flex-column justify-content-center align-items-center h-75">
+                              <!-- Quote Content -->
+                              <div class="quote-content">“A blog is a digital publication that can complement a website or
+                                  exist independently. A blog may include articles, short posts, listicles, infographics,
+                                  videos, and other digital content.”</div>
+                              <!-- Star Ratings -->
+                              <div class="stars mt-3 mb-2">
+                                  <i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star-half-stroke"></i>
+                                  <i class="fa-regular fa-star"></i>
+                              </div>
+                              <!-- Author Name -->
+                              <div>JENNIE ROSE</div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Quote Item 2 -->
+                  <div class="carousel-item">
+                      <div class="d-flex justify-content-center align-items-center">
+                          <div class="d-flex flex-column justify-content-center align-items-center h-75">
+                              <!-- Quote Content -->
+                              <div class="quote-content">“Tempus oncu enim pellen tesque este pretium in neque, elit morbi
+                                  sagittis lorem habi mattis Pellen tesque pretium feugiat vel morbi suspen dise sagittis
+                                  lorem habi tasse morbi.”</div>
+                              <!-- Star Ratings -->
+                              <div class="stars mt-3 mb-2">
+                                  <i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star"></i>
+                                  <i class="fa-solid fa-star-half-stroke"></i>
+                                  <i class="fa-regular fa-star"></i>
+                              </div>
+                              <!-- Author Name -->
+                              <div>EMMA CHAMBERLIN</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- Carousel Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon carousel-button" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                  <span class="carousel-control-next-icon carousel-button" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+      </div>
+
+      <!-- Footer Section -->
+      <footer class="container mb-5">
+          <div class="row">
+              <!-- Empty column to offset content -->
+              <div class="col-md-1"></div>
+              
+              <!-- Logo and Contact Information -->
+              <div class="col-md-3 col-6 mt-5">
+                  <!-- Logo -->
+                  <div class="col"><img src="../imgs/main-logo.png" alt=""></div>
+                  
+                  <!-- Short Description -->
+                  <p class="opacity-50 col">Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit hendrerit. Gravida massa
+                      volutpat aenean odio erat nullam fringilla.</p>
+                  
+                  <!-- Social Media Links -->
+                  <div class="col">
+                      <a href="https://www.facebook.com/abdo.khaled.98284/"><i class="fa-brands fa-facebook mx-3"></i></a>
+                      <a href="www.linkedin.com/in/abdo-khaled-34235b283"><i class="fa-brands fa-linkedin mx-3"></i></a>
+                  </div>
+              </div>
+              
+              <!-- Quick Links -->
+              <div class="col-md-3 col-6 d-flex flex-column  mt-5">
+                  <h5 class="my-1">QUICK LINKS</h5>
+                  <a href="../index.php" class="my-1 links">HOME</a>
+                  <a href="#" class="my-1 links">ABOUT</a>
+                  <a href="../shop/shop.php" class="my-1 links">SHOP</a>
+                  <a href="../contact/contact.php" class="my-1 links">CONTACT</a>
+              </div>
+              
+              <!-- Contact Information -->
+              <div class="col-md-3 col-6 mt-5">
+                  <h5>CONTACT US</h5>
+                  
+                  <!-- Email Section -->
+                  <div class="d-flex flex-column mb-3">
+                      <span class="opacity-50">Do you have any queries or suggestions?</span>
+                      <span><a href="mailto:abdelrhmanosama814@gmail.com" class="links">SEND EMAIL</a></span>
+                  </div>
+                  
+                  <!-- Phone Number Section -->
+                  <div class="d-flex flex-column mb-3">
+                      <span class="opacity-50">If you need support? Just give us a call.</span>
+                      <span><a href="#" class="links">0201020502664</a></span>
+                  </div>
+              </div>
+          </div>
+      </footer>
+
+      <!-- Bootstrap JS Library -->
+      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+      </script> -->
+        <script src = "../bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
+        <script src = "../bootstrap-5.1.3-dist/js/all.min.js"></script>
+      <!-- Check for Back/Forward Navigation -->
+      <script>
+          // Get performance entries of type "navigation"
+          var perfEntries = performance.getEntriesByType("navigation");
+
+          // Check if the type is "back_forward," reload the page
+          if (perfEntries[0].type === "back_forward") {
+              location.reload();
+          }
+
+          // Execute when the window has loaded
+          window.onload = function () {
+              // Check if counter value is stored in localStorage
+              if (localStorage.counter) {
+                  // Update counter elements with stored value
+                  document.querySelectorAll(".counter")[0].innerHTML = localStorage.counter;
+                  document.querySelectorAll(".counter")[1].innerHTML = localStorage.counter;
+              } else {
+                  // Set default counter value if not found
+                  document.querySelectorAll(".counter")[0].innerHTML = 0;
+                  document.querySelectorAll(".counter")[1].innerHTML = 0;
+              }
+          };
+      </script>
+
+      <!-- Modal Event Listener -->
+      <script>
+          // Get modal element by ID
+          var modalId = document.getElementById('modalId');
+
+          // Add event listener for modal show event
+          modalId.addEventListener('show.bs.modal', function (event) {
+              // Button that triggered the modal
+              let button = event.relatedTarget;
+
+              // Extract info from data-bs-* attributes
+              let recipient = button.getAttribute('data-bs-whatever');
+
+              // Use the above variables to manipulate the DOM or perform actions
+          });
+      </script>
+  </body>
+</html>

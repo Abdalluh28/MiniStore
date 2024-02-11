@@ -1,0 +1,134 @@
+/* Styling for links */
+#linkone > a,
+.hoverlink:hover > a,
+.links {
+    color: #72AEC8;
+}
+
+/* Styling for the cart icon and badge */
+.cart {
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+}
+
+.cart > * {
+    color: black;
+    transition: all 0.3s;
+}
+
+.cart:hover > i {
+    color: #72AEC8;
+}
+
+.cart > i {
+    transform: scale(2);
+}
+
+.badge {
+    transform: translate(-20px, -10px);
+    border-radius: 50%;
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 514px) {
+    .offcanvas-title {
+        display: none;
+    }
+}
+
+/* Styling for the header section */
+.header {
+    background-color: #EDF1F3;
+    height: 200px;
+}
+
+.header > span {
+    font-size: 50px;
+}
+
+/* Styling for links when hovered */
+#link,
+.links {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+#link:hover,
+.links:hover {
+    color: #72AEC8;
+}
+
+/* Responsive styling for screens up to 992px */
+@media screen and (max-width: 992px) {
+    .second {
+        transform: translate(-10%, 0);
+    }
+}
+
+/* Styling for the shop-img element */
+.shop-img {
+    max-width: 100%;
+    transform: scaleY(1.22);
+}
+
+/* Responsive styling for screens up to 575px */
+@media screen and (max-width: 575px) {
+    .shop-img {
+        transform: scaleY(1);
+    }
+}
+
+/* Styling for navbar links */
+.navbar-link {
+    text-decoration: none;
+    color: #72AEC8;
+    margin: 5px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.navbar-link:hover {
+    color: #007bff;
+}
+
+/* Styling for the general section */
+.general {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+/* Styling for left and right sections within the general section */
+.left,
+.right {
+    height: 500px;
+    width: 200px;
+}
+
+/* Styling for the bbb class (button) */
+.bbb {
+    width: 100%;
+}
+
+/* Responsive styling for screens up to 767px */
+@media screen and (max-width: 767px) {
+    .general {
+        flex-direction: column;
+    }
+
+    .general .left h2,
+    .right {
+        text-align: center;
+    }
+
+    .left,
+    .right {
+        height: 350px;
+    }
+}
