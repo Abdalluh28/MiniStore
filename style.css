@@ -23,6 +23,9 @@
 .hoverlink:hover>a{
     color: var(--primary-color);
 }
+body {
+    overflow:hidden;
+}
 
 
 /* start of cart and badge */
